@@ -3,11 +3,6 @@
 #define IO_LED 8
 #define IO_BUTTON 10
 
-#define time_t unsigned long
-#define bool int
-#define true 1
-#define false 0
-
 time_t blinkInterval = 1000;
 time_t lastMillis = 0;
 time_t programmingStart = 0;
