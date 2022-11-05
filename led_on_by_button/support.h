@@ -39,14 +39,14 @@
 #define LOG(...)      _LOG_N2(_NUM_ARGS(__VA_ARGS__), __VA_ARGS__)
 
 #define time_t unsigned long
-#define i8 char
-#define u8 unsigned char
-#define i16 int
-#define u16 unsigned int
-#define i32 long
-#define u32 unsigned long
-#define i64 long long
-#define u64 unsigned long long
+#define i8 int8_t
+#define u8 uint8_t
+#define i16 int16_t
+#define u16 uint16_t
+#define i32 int32_t
+#define u32 uint32_t
+#define i64 int64_t
+#define u64 uint64_t
 #define bool int
 #define true 1
 #define false 0

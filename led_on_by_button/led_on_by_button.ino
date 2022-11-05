@@ -1,21 +1,26 @@
+#include <EEPROM.h>
 #include "support.h"
 
 #define IO_LED 8
 #define IO_BUTTON 10
 
-time_t blinkInterval = 1000;
+time_t blinkInterval;
 time_t lastMillis = 0;
 time_t programmingStart = 0;
 bool isProgramming = false;
 
 void setup() {
-   pinMode(IO_BUTTON, INPUT_PULLUP);
-   pinMode(IO_LED, OUTPUT);
+  pinMode(IO_BUTTON, INPUT_PULLUP);
+  pinMode(IO_LED, OUTPUT);
 
-   Serial.begin(9600);
+  Serial.begin(9600);
+  while (!Serial) ;
+
+  EEPROM.get(0, blinkInterval);
+  LOG("READ BLINK INTERVAL ", blinkInterval);
 }
 
-void loop(){
+void loop() {
   if (isProgramming) {
     if (isButtonPressed()) {
 
@@ -23,6 +28,8 @@ void loop(){
 
       blinkInterval = lastMillis - programmingStart;
       isProgramming = false;
+
+      EEPROM.put(0, blinkInterval);
 
       LOG("END PROGRAMMING interval ", blinkInterval);
 
