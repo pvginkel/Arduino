@@ -1,3 +1,5 @@
+#pragma once
+
 #define _LOG1(a1) Serial.println(a1)
 #define _LOG2(a1, a2) Serial.print(a1); Serial.println(a2)
 #define _LOG3(a1, a2, a3) Serial.print(a1); Serial.print(a2); Serial.println(a3)
@@ -38,15 +40,4 @@
 #define _LOG_N2(N, ...) _LOG_N3(N, __VA_ARGS__)
 #define LOG(...)      _LOG_N2(_NUM_ARGS(__VA_ARGS__), __VA_ARGS__)
 
-#define time_t unsigned long
-#define i8 int8_t
-#define u8 uint8_t
-#define i16 int16_t
-#define u16 uint16_t
-#define i32 int32_t
-#define u32 uint32_t
-#define i64 int64_t
-#define u64 uint64_t
-#define bool int
-#define true 1
-#define false 0
+typedef uint32_t time_t;
