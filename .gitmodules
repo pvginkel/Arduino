@@ -1,0 +1,3 @@
+[submodule "xbee-zha-arduino"]
+	path = xbee-zha-arduino
+	url = https://github.com/pvginkel/xbee-zha-arduino.git
