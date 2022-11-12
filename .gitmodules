@@ -4,3 +4,6 @@
 [submodule "quad_garage"]
 	path = quad_garage
 	url = https://github.com/prairiesnpr/QuadGarageDoorController.githttps://github.com/pvginkel/QuadGarageDoorController.git
+[submodule "DuinoZigBeeAPI"]
+	path = DuinoZigBeeAPI
+	url = https://github.com/pvginkel/DuinoZigBeeAPI.git
