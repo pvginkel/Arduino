@@ -106,6 +106,7 @@ public:
 	inline T& operator[](size_t& i) { return this->get(i); }
   	inline const T& operator[](const size_t& i) const { return this->get(i); }
 
+	LinkedList<T>& operator=(const LinkedList<T>& other) = delete;
 };
 
 // Initialize LinkedList with false values
